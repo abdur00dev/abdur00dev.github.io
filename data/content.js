@@ -6,7 +6,7 @@ window.SITE_CONTENT = {
     affiliation: "Indian Institute of Technology Indore",
     affiliationUrl: "https://www.iiti.ac.in/",
     email: "phd2401141001@iiti.ac.in",
-    avatar: "https://avatars.githubusercontent.com/u/186547695?v=4",
+    avatar: "assets/img/profile-photo.jpg",
     scholar: "https://scholar.google.com/citations?hl=en&user=OBP2g7wAAAAJ&view_op=list_works&sortby=pubdate",
     links: [
       { label: "Scholar", url: "https://scholar.google.com/citations?hl=en&user=OBP2g7wAAAAJ&view_op=list_works&sortby=pubdate" },
