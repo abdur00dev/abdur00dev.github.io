@@ -68,7 +68,6 @@ window.SITE_CONTENT = {
   awards: [
     "CSIR-UGC NET (Mathematical Science), 2023 — All India Rank 52.",
     "GATE (Mathematics), 2024 — All India Rank 347.",
-    "Institute Best Research Paper Award, IIT Indore, 2025."
   ],
   serviceGroups: [
     {title:"IEEE Leadership",items:["Vice Chair, IEEE Student Branch, IIT Indore — Apr. 2026–Present","Student Representative, IEEE Madhya Pradesh Section — 2026–Present","Webmaster, IEEE CIS Madhya Pradesh Section — 2025–2026"]},
