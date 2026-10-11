@@ -60,11 +60,6 @@ window.SITE_CONTENT = {
     {period:"Aug 2020 – Aug 2022", title:"Master of Science", organization:"Jamia Millia Islamia", location:"New Delhi, India", detail:"Department of Mathematics · CGPA: 9.29/10"},
     {period:"Aug 2017 – Jul 2020", title:"Bachelor of Science (Mathematics)", organization:"Gauhati University", location:"Assam, India", detail:"CGPA: 7.64/10"}
   ],
-  experience: [
-    {period:"Apr 2026 – Present", title:"Vice Chair", organization:"IEEE Student Branch, IIT Indore", location:"IIT Indore"},
-    {period:"2026 – Present", title:"Student Representative", organization:"IEEE Madhya Pradesh Section", location:"Madhya Pradesh"},
-    {period:"2025 – 2026", title:"Webmaster", organization:"IEEE CIS Madhya Pradesh Section", location:"Madhya Pradesh"}
-  ],
   awards: [
     "CSIR-UGC NET (Mathematical Science), 2023 — All India Rank 52.",
     "GATE (Mathematics), 2024 — All India Rank 347.",
