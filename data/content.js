@@ -9,10 +9,11 @@ window.SITE_CONTENT = {
     avatar: "/assets/img/profile_photo_2.jpeg?v=20261011-6",
     scholar: "https://scholar.google.com/citations?hl=en&user=OBP2g7wAAAAJ&view_op=list_works&sortby=pubdate",
     links: [
-      { label: "Scholar", url: "https://scholar.google.com/citations?hl=en&user=OBP2g7wAAAAJ&view_op=list_works&sortby=pubdate" },
-      { label: "GitHub", url: "https://github.com/abdur00dev" },
-      { label: "ORCID", url: "https://orcid.org/0009-0005-1038-5180" },
-      { label: "LinkedIn", url: "https://in.linkedin.com/in/abdur-rahaman-ml" }
+      { label: "Scholar", icon: "scholar", url: "https://scholar.google.com/citations?hl=en&user=OBP2g7wAAAAJ&view_op=list_works&sortby=pubdate" },
+      { label: "GitHub", icon: "github", url: "https://github.com/abdur00dev" },
+      { label: "LinkedIn", icon: "linkedin", url: "https://in.linkedin.com/in/abdur-rahaman-ml" },
+      { label: "CV", icon: "cv", url: "/cv.html" },
+      { label: "ORCID", icon: "orcid", url: "https://orcid.org/0009-0005-1038-5180" }
     ]
   },
   about: [
