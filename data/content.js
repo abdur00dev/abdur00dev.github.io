@@ -61,6 +61,7 @@ window.SITE_CONTENT = {
     {period:"Aug 2017 – Jul 2020", title:"Bachelor of Science (Mathematics)", organization:"Gauhati University", location:"Assam, India", detail:"CGPA: 7.64/10"}
   ],
   awards: [
+    "Selected for the IJCNN 2026 Doctoral Consortium by the International Neural Network Society (INNS) and awarded an INNS travel grant, 2026.",
     "CSIR-UGC NET (Mathematical Science), 2023 — All India Rank 52.",
     "GATE (Mathematics), 2024 — All India Rank 347.",
   ],
