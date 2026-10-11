@@ -52,7 +52,6 @@
     items.forEach(x=>{ const e=document.createElement("article"); e.className="entry"; e.append(text("div",x.period,"entry-period")); const copy=document.createElement("div"); copy.className="entry-copy"; copy.append(text("h3",x.title),text("p",x.organization)); const detail=[x.location,x.detail].filter(Boolean).join(" · "); if(detail)copy.append(text("p",detail)); if(x.summary)copy.append(text("p",x.summary,"entry-summary")); e.append(copy); root.append(e); });
   };
   renderEntries("education-content",c.education);
-  renderEntries("experience-content",c.experience);
 
   const awards=$("awards-content"); awards.replaceChildren();
   c.awards.forEach(x=>awards.append(text("li",x)));
