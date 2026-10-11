@@ -4,6 +4,31 @@
   const link = (label,url,cls="") => {
     const a=document.createElement("a"); a.textContent=label; a.href=url; a.target="_blank"; a.rel="noreferrer"; if(cls)a.className=cls; return a;
   };
+  const profileIcon = (name) => {
+    const span=document.createElement("span");
+    span.className="profile-link-icon";
+    span.setAttribute("aria-hidden","true");
+    const icons={
+      scholar:'<svg viewBox="0 0 24 24"><path d="M3 10.2 12 5l9 5.2-9 5.2L3 10.2Z"/><path d="M6.8 12.4V17c2.8 2 7.6 2 10.4 0v-4.6"/><path d="M20.8 10.6v5"/></svg>',
+      github:'<svg viewBox="0 0 24 24"><path d="M9 19c-4.5 1.4-4.5-2.4-6.3-3m12.6 5v-3.5c0-1 .1-1.5-.5-2.1 3.1-.3 6.4-1.5 6.4-6.9 0-1.5-.5-2.8-1.4-3.8.1-.4.6-1.8-.1-3.7 0 0-1.1-.4-3.9 1.5a13.3 13.3 0 0 0-7 0C6 0.6 4.9 1 4.9 1c-.7 1.9-.2 3.3-.1 3.7A5.5 5.5 0 0 0 3.4 8.5c0 5.4 3.3 6.6 6.4 6.9-.4.4-.7.9-.8 1.7V21"/></svg>',
+      linkedin:'<svg viewBox="0 0 24 24"><path d="M6 9v10M6 5.5v.1M10.5 19v-6c0-2 1-3.4 2.8-3.4 1.7 0 2.7 1.1 2.7 3.4v6M10.5 10v9"/><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/></svg>',
+      cv:'<svg viewBox="0 0 24 24"><path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 15.5h6"/></svg>',
+      orcid:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 9.2v5.6M9 7.2h.01M12 14.8v-5.6h2.1c1.8 0 2.9 1 2.9 2.8s-1.1 2.8-2.9 2.8H12Z"/></svg>',
+      email:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.8"/><path d="m4.2 6.2 7.8 6.2 7.8-6.2"/></svg>'
+    };
+    span.innerHTML=icons[name]||"";
+    return span;
+  };
+  const profileLink=(item)=>{
+    const a=document.createElement("a");
+    a.className="profile-icon-link";
+    a.href=item.url;
+    a.target=item.url.startsWith("mailto:")?"_self":"_blank";
+    if(a.target==="_blank") a.rel="noreferrer";
+    if(item.icon) a.append(profileIcon(item.icon));
+    a.append(document.createTextNode(item.label));
+    return a;
+  };
   const text = (tag, value, cls="") => { const e=document.createElement(tag); e.textContent=value||""; if(cls)e.className=cls; return e; };
   const paperPreview = title => {
     const safe=(title||"Publication").replace(/[&<>"']/g,s=>"");
@@ -19,10 +44,15 @@
   aff.replaceChildren(link(c.profile.affiliation,c.profile.affiliationUrl));
   $("profile-avatar").src=c.profile.avatar;
   $("profile-avatar").alt=c.profile.name;
-  $("profile-email").textContent="Email";
-  $("profile-email").href="mailto:"+c.profile.email;
+  const email=$("profile-email");
+  email.replaceChildren(profileIcon("email"),document.createTextNode(c.profile.email));
+  email.href="mailto:"+c.profile.email;
+  email.classList.add("profile-icon-link");
   const pl=$("profile-links"); pl.replaceChildren();
-  c.profile.links.forEach((x,i)=>{ if(i) pl.append(document.createTextNode(" / ")); pl.append(link(x.label,x.url)); });
+  c.profile.links.forEach((x,i)=>{
+    if(i){ const sep=document.createElement("span"); sep.className="profile-slash"; sep.textContent="/"; pl.append(sep); }
+    pl.append(profileLink(x));
+  });
   $("scholar-link").href=c.profile.scholar;
 
   const about=$("about-content"); about.replaceChildren();
