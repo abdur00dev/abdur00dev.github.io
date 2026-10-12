@@ -153,6 +153,7 @@ researchInterests: [
       venue: "IEEE WCCCI 2026",
       contribution: "First author",
       image: "assets/img/ecabls_arc.png",
+      note:"Oral presentation",
       links: [
         { label: "Paper", url: "https://arxiv.org/abs/2608.29763" },
         { label: "Code", url: "https://github.com/AnonymousAuthor0011/ECA-BLS" }
