@@ -1,5 +1,3 @@
-# Abdur Rahaman — Academic Website
-
 This repository contains the source code for the personal academic website of **Abdur Rahaman**, PhD Research Scholar at the **Indian Institute of Technology Indore**.
 
 **Live website:** https://abdur00dev.github.io/  
