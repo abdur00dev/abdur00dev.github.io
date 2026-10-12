@@ -29,6 +29,7 @@ window.SITE_CONTENT = {
     "International Neural Network Society (INNS)": "https://neural.memberclicks.net/inns-sponsored-events-at-ijcnn-at-wcci-2026",
     "CSIR-UGC NET": "https://csirnet.nta.nic.in/",
     "GATE": "https://gate2024.iisc.ac.in/",
+    "Department of Mathematics": "https://math.iiti.ac.in/",
   },
 
   about: [
