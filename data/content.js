@@ -1,6 +1,6 @@
 window.SITE_CONTENT = {
   siteMeta: {
-    lastUpdated: "September 28, 2026"
+    lastUpdated: "October 10, 2026"
   },
 
   profile: {
